@@ -1,6 +1,6 @@
 from django.contrib.auth.forms import UserCreationForm, AuthenticationForm
 from django.contrib.auth.models import User
-from .models import santa_user
+from .models import santa_user, reindeerbooking
 from django import forms
 from django.forms.widgets import PasswordInput, TextInput
 
@@ -30,7 +30,7 @@ class UpdateRecordForm(forms.ModelForm):
         class Meta:
              model = santa_user
              fields = ['first_name', 'last_name', 'email', 'phone', 'address', 'city']
-class reindeer_booking(forms.ModelForm):
+class reindeer_booking_form(forms.ModelForm):
      
     class Meta:
         model = reindeerbooking
@@ -47,4 +47,4 @@ class reindeer_booking(forms.ModelForm):
         }
 
     def __init__(self, *args, **kwargs):
-         super().__init__(*args,**kwargs)
+        super().__init__(*args,**kwargs)

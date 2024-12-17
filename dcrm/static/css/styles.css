@@ -10,3 +10,6 @@ body{
 .navbar{
     background-color: green;
 }
+.errorlist{
+    color: red;
+}
