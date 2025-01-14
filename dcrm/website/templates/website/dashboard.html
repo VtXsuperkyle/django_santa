@@ -8,5 +8,29 @@
             <thead class="table-primary">
                 <tr>
                     <th scope="col"> Booking ID </th>
-
+                    <th scope="col"> Booking Date </th>
+                    <th scope="col"> Arrive </th>
+                    <th scope="col"> Depart </th>
+                    <th scope="col"> Adults </th>
+                    <th scope="col"> Children </th>
+                    <th scope="col"> Cost </th>
+                </tr>
+            </thead>
+            <tbody>
+            {% if ride_records %}
+                {% for record in ride_records %}
+                <tr>
+                    <td> {{record.booking_id}} </td>
+                    <td> {{record.ride_booking_date}} </td>
+                    <td> {{record.ride_booking_date_arrive}} </td>
+                    <td> {{record.ride_booking_date_leave}} </td>
+                    <td> {{record.ride_booking_adults}} </td>
+                    <td> {{record.ride_booking_children}} </td>
+                    <td> {{record.ride_booking_cost}} </td>
+                </tr>
+                {% endfor %}
+            {% endif %}
+            </tbody>
+        </table>
+</div>
 {% endblock %}
